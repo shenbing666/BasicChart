@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicChartUI", "BasicChartUI\BasicChartUI.csproj", "{92B377ED-B832-4290-8CDA-D549F4421062}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicChartLib", "BasicChartLib\BasicChartLib.csproj", "{2F2A0E38-5927-4793-8D80-CA357F582D08}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92B377ED-B832-4290-8CDA-D549F4421062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92B377ED-B832-4290-8CDA-D549F4421062}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92B377ED-B832-4290-8CDA-D549F4421062}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92B377ED-B832-4290-8CDA-D549F4421062}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F2A0E38-5927-4793-8D80-CA357F582D08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F2A0E38-5927-4793-8D80-CA357F582D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F2A0E38-5927-4793-8D80-CA357F582D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F2A0E38-5927-4793-8D80-CA357F582D08}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F410BC2-947D-4D88-956B-5E5E47170F8D}
+	EndGlobalSection
+EndGlobal
