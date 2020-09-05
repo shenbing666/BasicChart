@@ -50,7 +50,6 @@
     <Compile Include="ChartHandle\PieChart.cs" />
     <Compile Include="ChartHandle\SplineChart.cs" />
     <Compile Include="ChartHandle\xy.cs" />
-    <Compile Include="ChartHelper2.cs" />
     <Compile Include="Common\StringTools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
