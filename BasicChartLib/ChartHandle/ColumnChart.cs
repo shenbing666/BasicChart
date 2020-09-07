@@ -25,11 +25,11 @@ namespace CHART_DEMO.ChartHandle
             {
                 if (string.IsNullOrEmpty(xys[i].LineTitle))
                 {
-                    ChartHelper2.AddSeries(chart, "柱状图" + i, SeriesChartType.Column, ChartsColor[i], ChartsColor[i + 1], true);
+                    ChartHelper.AddSeries(chart, "柱状图" + i, SeriesChartType.Column, ChartsColor[i], ChartsColor[i + 1], true);
                 }
                 else
                 {
-                    ChartHelper2.AddSeries(chart, xys[i].LineTitle, SeriesChartType.Column, ChartsColor[i], ChartsColor[i + 1], true);
+                    ChartHelper.AddSeries(chart, xys[i].LineTitle, SeriesChartType.Column, ChartsColor[i], ChartsColor[i + 1], true);
                 }
             }
 

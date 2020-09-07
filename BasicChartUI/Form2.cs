@@ -64,7 +64,7 @@ namespace CHART_DEMO
                 c1.YTitle = "产量";
                 c1.XInterval = 2;
                 c1.YInterval = 10;
-                 c1.init(lst);
+                c1.init(lst);
 
                 //实例化图表对象
                 Charts c2 = new PieChart(chart3);
