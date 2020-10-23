@@ -10,14 +10,23 @@
  
 折线图：
         ChartBasicModel model = new ChartBasicModel(
+
                  chart1,
+
                  new ChartStyle() { },
+
                  new ChartTitle() { },
+
                  new XAxis() { Name = "序号", Type = "折线图", Data = x1 },
+
                  new YAxis() { Name = "数值", Type = "value" },
+
                  new Series[] {
+
                     new Series {Type=ChartTypeEnum.Line,Name="折线1",Data=y1},
+
                     new Series {Type=ChartTypeEnum.Line,Name="折线2",Data=y2 }
+                    
                  }
               );
         ChartBasic chartBasic = new ChartBasic();
