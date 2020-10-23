@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BasicChartLib</RootNamespace>
     <AssemblyName>BasicChartLib</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,6 +30,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -43,14 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChartHandle\ChartHelper.cs" />
-    <Compile Include="ChartHandle\Charts.cs" />
-    <Compile Include="ChartHandle\ChartStyleEnum.cs" />
-    <Compile Include="ChartHandle\ColumnChart.cs" />
-    <Compile Include="ChartHandle\PieChart.cs" />
-    <Compile Include="ChartHandle\SplineChart.cs" />
-    <Compile Include="ChartHandle\xy.cs" />
-    <Compile Include="Common\StringTools.cs" />
+    <Compile Include="ChartHandles\ChartBasic.cs" />
+    <Compile Include="ChartHandles\ChartHelper.cs" />
+    <Compile Include="ChartHandles\ChartTypeEnum.cs" />
+    <Compile Include="ChartModels\ChartBasicModel.cs" />
+    <Compile Include="Common\ChartColors.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+﻿using System.Drawing;
 using System.Windows.Forms.DataVisualization.Charting;
 
-namespace CHART_DEMO.ChartHandle
+namespace BasicChartLib
 {
     public class ChartHelper
     {
@@ -47,7 +43,7 @@ namespace CHART_DEMO.ChartHandle
             chart.Titles.Add(chartName);
             chart.Titles[0].Font = font;
             chart.Titles[0].Docking = docking;
-            chart.Titles[0].ForeColor = foreColor;
+            chart.Titles[0].ForeColor = foreColor;        
             //return chart;
         }
 
@@ -122,7 +118,7 @@ namespace CHART_DEMO.ChartHandle
                 chart.ChartAreas[0].AxisY2.LabelStyle = new LabelStyle() { ForeColor = foreColor };
                 chart.ChartAreas[0].AxisY2.LineColor = lineColor;
                 chart.ChartAreas[0].AxisY2.ArrowStyle = arrowStyle;
-                chart.ChartAreas[0].AxisY2.Interval = yInterval + 10;
+                chart.ChartAreas[0].AxisY2.Interval = yInterval + 10;        
             }
 
             //return chart;
