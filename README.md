@@ -6,20 +6,10 @@
 
 博客地址：https://www.cnblogs.com/shenbing/p/13614012.html
  
-模拟数据：
-List<string> x1 = new List<string>() { "1", "2", "3", "4", "5" };
-List<string> x2 = new List<string>() { "直接访问", "邮件营销", "联盟广告", "视频广告", "搜索引擎" };
-Random ra = new Random();
-List<double> y1 = new List<double>() {
-    ra.Next(1, 10), ra.Next(1, 10),ra.Next(1, 10),ra.Next(1, 10),ra.Next(1, 20)
-};
 
-List<double> y2 = new List<double>() {
-    ra.Next(1, 20), ra.Next(1, 20), ra.Next(1, 20),ra.Next(1, 20), ra.Next(1, 40)
-};
  
 折线图：
-ChartBasicModel model = new ChartBasicModel(
+$ChartBasicModel model = new ChartBasicModel(
          chart1,
          new ChartStyle() { },
          new ChartTitle() { },
@@ -30,8 +20,8 @@ ChartBasicModel model = new ChartBasicModel(
             new Series {Type=ChartTypeEnum.Line,Name="折线2",Data=y2 }
          }
       );
-ChartBasic chartBasic = new ChartBasic();
-chart1 = chartBasic.init(model);
+$ChartBasic chartBasic = new ChartBasic();
+$chart1 = chartBasic.init(model);
 
 柱状图：
 ChartBasicModel model1 = new ChartBasicModel(
