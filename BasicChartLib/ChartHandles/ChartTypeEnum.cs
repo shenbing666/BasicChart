@@ -10,23 +10,23 @@ namespace BasicChartLib
     public enum ChartTypeEnum
     {
         /// <summary>
-        /// 13 面积图类型。
+        /// 13 面积图类型√
         /// </summary>
         Area,
         /// <summary>
-        /// 7 条形图类型。
+        /// 7 条形图类型√
         /// </summary>
         Bar,
         /// <summary>
-        /// 28 盒须图类型。
+        /// 28 盒须图类型√
         /// </summary>
         BoxPlot,
         /// <summary>
-        /// 2气泡图类型。
+        /// 2气泡图类型√
         /// </summary>
         Bubble,
         /// <summary>
-        /// 20K 线图类型。
+        /// 20 线图类型。
         /// </summary>
         Candlestick,
         /// <summary>
@@ -70,11 +70,11 @@ namespace BasicChartLib
         /// </summary>
         Point,
         /// <summary>
-        /// 32点数图类型。
+        /// 32点数图类型
         /// </summary>
         PointAndFigure,
         /// <summary>
-        /// 26极坐标图类型。
+        /// 26极坐标图类型【有问题】
         /// </summary>
         Polar,
         /// <summary>
@@ -146,7 +146,7 @@ namespace BasicChartLib
         /// </summary>
         Stock,
         /// <summary>
-        /// 30新三值图类型。
+        /// 30新三值图类型/三行中断图表法
         /// </summary>
         ThreeLineBreak,
     }

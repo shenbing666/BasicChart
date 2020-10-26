@@ -13,12 +13,13 @@ namespace BasicChartLib
         private Color _backColor = Color.Transparent;
         private Color _areasBackColor = Color.Transparent;
         private Color _foreColor = Color.Black;
-        private Color _xMajorGridLineColor = Color.Gray;
-        private Color _yMajorGridLineColor = Color.Gray;
+        private Color _gridLineColor = Color.White;
         private double _xMajorGridInterval = 2;
         private double _yMajorGridInterval = 10;
         private double _x2MajorGridInterval = 0;
         private double _y2MajorGridInterval = 0;
+        private AxisArrowStyle axisArrowStyle= AxisArrowStyle.SharpTriangle;
+
 
         /// <summary>
         /// 背景颜色
@@ -33,15 +34,16 @@ namespace BasicChartLib
         /// </summary>
         public Color ForeColor { get => _foreColor; set => _foreColor = value; }
 
-        /// <summary>
-        /// X轴网格线颜色
-        /// </summary>
-        public Color XMajorGridLineColor { get => _xMajorGridLineColor; set => _xMajorGridLineColor = value; }
+       /// <summary>
+       /// 轴箭头样式
+       /// </summary>
+        public AxisArrowStyle AxisArrowStyle { get => axisArrowStyle; set => axisArrowStyle = value; }
 
         /// <summary>
-        /// Y轴网格线颜色
+        /// 网格线颜色
         /// </summary>
-        public Color YMajorGridLineColor { get => _yMajorGridLineColor; set => _yMajorGridLineColor = value; }
+        public Color GridLineColor { get => _gridLineColor; set => _gridLineColor = value; }
+
 
         /// <summary>
         /// X轴网格线间隔
@@ -62,7 +64,7 @@ namespace BasicChartLib
         /// Y 2轴网格线间隔
         /// </summary>
         public double Y2MajorGridInterval { get => _y2MajorGridInterval; set => _y2MajorGridInterval = value; }
-
+      
     }
 
     /// <summary>
@@ -106,15 +108,21 @@ namespace BasicChartLib
     /// </summary>
     public class Series
     {
+        private Color _labelColor=Color.Black;
+
         public string Name { get; set; }
         /// <summary>
         /// 图标类型，bar、line、pie
         /// </summary>
         public ChartTypeEnum Type { get; set; }
         public List<double> Data { get; set; }
+        public List<double> Data2 { get; set; }
+        public List<double> Data3 { get; set; }
+        public List<double> Data4 { get; set; }
         public bool ShowBackground { get; set; }
         public Color BackgroundStyle { get; set; }
 
+        public Color LabelColor { get => _labelColor; set => _labelColor = value; }
     }
 
     /// <summary>
@@ -124,7 +132,7 @@ namespace BasicChartLib
     {
         public ChartBasicModel() { }
 
-        public ChartBasicModel(Chart chart,ChartStyle style, ChartTitle title, XAxis x, YAxis y, Series[] series)
+        public ChartBasicModel(Chart chart, ChartStyle style, ChartTitle title, XAxis x, YAxis y, Series[] series)
         {
             this.chart = chart;
             this.chartStyle = style;
@@ -133,9 +141,23 @@ namespace BasicChartLib
             this.yAxis = y;
             this.serie = series;
         }
+
         public Chart chart;
+        private bool _seriesNum;
+        private bool _pointYNum;
+        /// <summary>
+        /// 每个点的y值数量是否包含多个
+        /// </summary>
+        public bool PointYNum { get => _pointYNum; set => _pointYNum = value; }
+
+        /// <summary>
+        /// serie数是否包含多个
+        /// </summary>
+        public bool SeriesNum { get => _seriesNum; set => _seriesNum = value; }
 
         public ChartStyle chartStyle;
+  
+
         public ChartTitle title { get; set; }
         public XAxis xAxis { get; set; }
         public YAxis yAxis { get; set; }

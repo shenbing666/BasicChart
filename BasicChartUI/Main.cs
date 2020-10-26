@@ -15,27 +15,35 @@ namespace CHART_DEMO
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-            List<string> x1 = new List<string>() { "1", "2", "3", "4", "5" };
+        {      
+            List<string> x1 = new List<string>() { "10", "20", "30", "40", "50" };
             Random ra = new Random();
             List<double> y1 = new List<double>() {
-                ra.Next(1, 10), ra.Next(1, 10),ra.Next(1, 10),ra.Next(1, 10),ra.Next(1, 20)
+                ra.Next(1, 10), ra.Next(10, 30),ra.Next(1, 10),ra.Next(10, 20),ra.Next(10, 20)
             };
 
 
             List<double> y2 = new List<double>() {
                 ra.Next(1, 20), ra.Next(1, 20), ra.Next(1, 20),ra.Next(1, 20), ra.Next(1, 40)
             };
+            List<double> y3 = new List<double>() {
+                ra.Next(1, 20), ra.Next(1, 20), ra.Next(1, 20),ra.Next(1, 20), ra.Next(1, 40)
+            };
+            List<double> y4 = new List<double>() {
+                ra.Next(1, 20), ra.Next(1, 20), ra.Next(1, 20),ra.Next(1, 20), ra.Next(1, 40)
+            };
+            List<double> y5 = new List<double>() {
+                ra.Next(1, 20), ra.Next(1, 20), ra.Next(1, 20),ra.Next(1, 20), ra.Next(1, 40)
+            };
 
             ChartBasicModel model = new ChartBasicModel(
                   chart1,
-                  new ChartStyle() { },
+                  new ChartStyle() { AxisArrowStyle=System.Windows.Forms.DataVisualization.Charting.AxisArrowStyle.SharpTriangle},
                   new ChartTitle() { },
                   new XAxis() { Name = "序号", Type = "折线图", Data = x1 },
                   new YAxis() { Name = "数值", Type = "value" },
                   new Series[] {
-                    new Series {Type=ChartTypeEnum.Line,Name="折线1",Data=y1},
-                    new Series {Type=ChartTypeEnum.Line,Name="折线1",Data=y2 }
+                      new Series {Type=ChartTypeEnum.ThreeLineBreak,Name="序列1",Data=y2,Data2=y1}
                     }
                 );
             ChartBasic chartBasic = new ChartBasic();
@@ -92,7 +100,7 @@ namespace CHART_DEMO
                     );
                     ChartBasic chartBasic1 = new ChartBasic();
                     chart1 = chartBasic1.init(model1);
-                    break;                 
+                    break;
                 case "饼图":
                     ChartBasicModel model2 = new ChartBasicModel(
                        chart1,

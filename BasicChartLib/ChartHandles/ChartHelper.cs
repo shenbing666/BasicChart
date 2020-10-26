@@ -13,14 +13,17 @@ namespace BasicChartLib
         /// <param name="chart">图表对象</param>
         /// <param name="seriesName">序列名称</param>
         /// <param name="chartType">图表类型</param>
-        /// <param name="color">颜色</param>
-        /// <param name="markColor">标记点颜色</param>
+        /// <param name="color">文本颜色</param>
+        /// <param name="markColor">标记点、边框颜色</param>
         /// <param name="showValue">是否显示数值</param>
         public static void AddSeries(Chart chart, string seriesName, SeriesChartType chartType, Color color, Color markColor, bool showValue = false)
         {
             chart.Series.Add(seriesName);
+       
             chart.Series[seriesName].ChartType = chartType;
-            chart.Series[seriesName].Color = color;
+            chart.Series[seriesName].Color = markColor;
+            chart.Series[seriesName].XValueType = ChartValueType.Auto;
+            chart.Series[seriesName].YValueType = ChartValueType.Auto;
             if (showValue)
             {
                 chart.Series[seriesName].IsValueShownAsLabel = true;
@@ -43,7 +46,7 @@ namespace BasicChartLib
             chart.Titles.Add(chartName);
             chart.Titles[0].Font = font;
             chart.Titles[0].Docking = docking;
-            chart.Titles[0].ForeColor = foreColor;        
+            chart.Titles[0].ForeColor = foreColor;
             //return chart;
         }
 
@@ -58,7 +61,7 @@ namespace BasicChartLib
         {
             chart.BackColor = backColor;
             chart.ChartAreas[0].BackColor = backColor;
-            chart.ForeColor = Color.Red;
+            chart.ForeColor = foreColor;
             //return chart;
         }
 
@@ -118,7 +121,7 @@ namespace BasicChartLib
                 chart.ChartAreas[0].AxisY2.LabelStyle = new LabelStyle() { ForeColor = foreColor };
                 chart.ChartAreas[0].AxisY2.LineColor = lineColor;
                 chart.ChartAreas[0].AxisY2.ArrowStyle = arrowStyle;
-                chart.ChartAreas[0].AxisY2.Interval = yInterval + 10;        
+                chart.ChartAreas[0].AxisY2.Interval = yInterval + 10;
             }
 
             //return chart;
