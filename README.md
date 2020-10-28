@@ -2,11 +2,9 @@
 
 通过winform实现chart控件
 
-目前只有折线图（单双轴）、条形图、饼图
-
 博客地址：https://www.cnblogs.com/shenbing/p/13614012.html
  
- 
+
 折线图：
        
        ChartBasicModel model = new ChartBasicModel(
@@ -55,3 +53,5 @@
        );
        ChartBasic chartBasic2 = new ChartBasic();
        chart1 = chartBasic2.init(model2);
+       
+----------其他图例请查看博客
